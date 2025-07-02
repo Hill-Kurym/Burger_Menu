@@ -1,0 +1,189 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:Burger_Menu.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="825" d:DesignHeight="480"
+        Width="825" Height="480" CanResize="False"
+        x:Class="Burger_Menu.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Burger_Menu">
+
+
+  <Window.Styles>
+    <StyleInclude Source="/MainWindowStyles.axaml"/>
+  </Window.Styles>
+
+  <Grid RowDefinitions="Auto,*,Auto">
+    <StackPanel Grid.Row="0">
+      <TextBlock Text="Burger Menu:Всё меню"
+                 HorizontalAlignment="Center"
+                 Padding="5"
+                 FontSize="24"/>
+    </StackPanel>
+    <StackPanel Grid.Row="1">
+      <Grid ColumnDefinitions="5*,Auto,*">
+        <ScrollViewer >
+          <StackPanel Grid.Column="0">
+            <Grid ColumnDefinitions="*,*,*"
+                  RowDefinitions="*,*,*,*,*,*,*,*,*">
+              <StackPanel Grid.Column="0" Grid.Row="0">
+                <Button HorizontalContentAlignment="Center" 
+                        VerticalContentAlignment="Center"
+                        Width="150" Height="60" Classes="Main" 
+                        Content="Бургер 1"/>
+              </StackPanel>
+              <StackPanel Grid.Column="1" Grid.Row="0">
+                <Button Width="150" Height="60" 
+                        Classes="Main" Content="Бургер 2"
+                        HorizontalContentAlignment="Center" 
+                        VerticalContentAlignment="Center"/>
+              </StackPanel>
+              <StackPanel Grid.Column="2" Grid.Row="0">
+                <Button Width="150" Height="60" 
+                        Classes="Main" Content="Бургер 3"
+                        HorizontalContentAlignment="Center" 
+                        VerticalContentAlignment="Center"/>
+              </StackPanel>
+              <StackPanel Grid.Column="0" Grid.Row="1">
+                <Button Width="150" Height="60" 
+                        Classes="Main" Content="Бургер 4"
+                        HorizontalContentAlignment="Center" 
+                        VerticalContentAlignment="Center"/>
+              </StackPanel>
+              <StackPanel Grid.Column="1" Grid.Row="1">
+                <Button Width="150" Height="60" 
+                        Classes="Main" Content="Бургер 5"
+                        HorizontalContentAlignment="Center" 
+                        VerticalContentAlignment="Center"/>
+              </StackPanel>
+              <StackPanel Grid.Column="2" Grid.Row="1">
+                <Button Width="150" Height="60" 
+                        Classes="Main" Content="Бургер 6"
+                        HorizontalContentAlignment="Center" 
+                        VerticalContentAlignment="Center"/>
+              </StackPanel>
+              <StackPanel Grid.Column="0" Grid.Row="2">
+                <Button Width="150" Height="60" 
+                        Classes="Main" Content="Бургер 7"
+                        HorizontalContentAlignment="Center" 
+                        VerticalContentAlignment="Center"/>
+              </StackPanel>
+              <StackPanel Grid.Column="1" Grid.Row="2">
+                <Button Width="150" Height="60" 
+                        Classes="Main" Content="Бургер 8"
+                        HorizontalContentAlignment="Center" 
+                        VerticalContentAlignment="Center"/>
+              </StackPanel>
+              <StackPanel Grid.Column="2" Grid.Row="2">
+                <Button Width="150" Height="60" 
+                        Classes="Main" Content="Бургер 9"
+                        HorizontalContentAlignment="Center" 
+                        VerticalContentAlignment="Center"/>
+              </StackPanel>
+
+              <StackPanel Grid.Column="0" Grid.Row="3">
+                <Button Width="150" Height="60" 
+                        Classes="Main" Content="Напиток 1"
+                        HorizontalContentAlignment="Center" 
+                        VerticalContentAlignment="Center"/>
+              </StackPanel>
+              <StackPanel Grid.Column="1" Grid.Row="3">
+                <Button Width="150" Height="60" 
+                        Classes="Main" Content="Напиток 2"
+                        HorizontalContentAlignment="Center" 
+                        VerticalContentAlignment="Center"/>
+              </StackPanel>
+              <StackPanel Grid.Column="2" Grid.Row="3">
+                <Button Width="150" Height="60" 
+                        Classes="Main" Content="Напиток 3"
+                        HorizontalContentAlignment="Center" 
+                        VerticalContentAlignment="Center"/>
+              </StackPanel>
+              <StackPanel Grid.Column="0" Grid.Row="4">
+                <Button Width="150" Height="60" 
+                        Classes="Main" Content="Напиток 4"
+                        HorizontalContentAlignment="Center" 
+                        VerticalContentAlignment="Center"/>
+              </StackPanel>
+              <StackPanel Grid.Column="1" Grid.Row="4">
+                <Button Width="150" Height="60" 
+                        Classes="Main" Content="Напиток 5"
+                        HorizontalContentAlignment="Center" 
+                        VerticalContentAlignment="Center"/>
+              </StackPanel>
+              <StackPanel Grid.Column="2" Grid.Row="4">
+                <Button Width="150" Height="60" 
+                        Classes="Main" Content="Напиток 6"
+                        HorizontalContentAlignment="Center" 
+                        VerticalContentAlignment="Center"/>
+              </StackPanel>
+              <StackPanel Grid.Column="0" Grid.Row="5">
+                <Button Width="150" Height="60" 
+                        Classes="Main" Content="Напиток 7"
+                        HorizontalContentAlignment="Center" 
+                        VerticalContentAlignment="Center"/>
+              </StackPanel>
+              <StackPanel Grid.Column="1" Grid.Row="5">
+                <Button Width="150" Height="60" 
+                        Classes="Main" Content="Напиток 8"
+                        HorizontalContentAlignment="Center" 
+                        VerticalContentAlignment="Center"/>
+              </StackPanel>
+              <StackPanel Grid.Column="2" Grid.Row="5">
+                <Button Width="150" Height="60" 
+                        Classes="Main" Content="Напиток 9"
+                        HorizontalContentAlignment="Center" 
+                        VerticalContentAlignment="Center"/>
+              </StackPanel>
+
+            </Grid>
+          </StackPanel>
+        </ScrollViewer>
+        <StackPanel Grid.Column="2">
+          <ScrollViewer>
+            <Grid RowDefinitions="*,*,*,*">
+              <Button HorizontalContentAlignment="Center"
+                      VerticalContentAlignment="Center" 
+                      Width="120" Height="40" 
+                      Classes="Main" Grid.Row="0" Content="Всё меню"/>
+              <Button HorizontalContentAlignment="Center"
+                      VerticalContentAlignment="Center" 
+                      Width="120" Height="40" 
+                      Classes="Main" Grid.Row="1" Content="Бургеры"/>
+              <Button HorizontalContentAlignment="Center"
+                      VerticalContentAlignment="Center" 
+                      Width="120" Height="40" 
+                      Classes="Main" Grid.Row="2" Content="Напитки"/>
+            </Grid>
+          </ScrollViewer>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+          <Border BorderBrush="Black" BorderThickness="1" 
+                  Width="5" Height="470" Background="Black"/>
+        </StackPanel>
+      </Grid>
+    </StackPanel>
+    <Grid ColumnDefinitions="5*,*" RowDefinitions="*,*" Grid.Row="2">
+      <Border Grid.Row="0" Grid.Column="0"
+              BorderBrush="Black" BorderThickness="1"
+              Width="820" Height="5" Background="Black"/>
+      <Border Grid.Row="0" Grid.Column="1"
+              BorderBrush="Black" BorderThickness="1"
+              Width="820" Height="5" Background="Black"/>
+      <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Left"
+                          Grid.Row="6" Grid.Column="2" Orientation="Horizontal">
+        <TextBlock Margin="5,0,5,0" HorizontalAlignment="Center"
+          VerticalAlignment="Center" Text="Цена:"/>
+        <TextBlock HorizontalAlignment="Center"
+                   VerticalAlignment="Center" Text="0"/>
+      </StackPanel>
+      <StackPanel HorizontalAlignment="Right" Grid.Row="1"
+                  Orientation="Horizontal">
+        <TextBlock HorizontalAlignment="Center"
+                   VerticalAlignment="Center" Text=""/>
+      </StackPanel>
+    </Grid>
+  </Grid>
+</Window>
