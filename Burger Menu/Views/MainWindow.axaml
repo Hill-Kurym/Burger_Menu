@@ -28,114 +28,185 @@
           <StackPanel Grid.Column="0">
             <Grid ColumnDefinitions="*,*,*"
                   RowDefinitions="*,*,*,*,*,*,*,*,*">
+				
               <StackPanel Grid.Column="0" Grid.Row="0">
                 <Button HorizontalContentAlignment="Center" 
                         VerticalContentAlignment="Center"
                         Width="150" Height="60" Classes="Main" 
-                        Content="Бургер 1"/>
+                        Content="Бургер 1"
+						
+						Command="{Binding ButtonClick}"
+                        CommandParameter="Burger"/>
               </StackPanel>
+				
               <StackPanel Grid.Column="1" Grid.Row="0">
                 <Button Width="150" Height="60" 
                         Classes="Main" Content="Бургер 2"
                         HorizontalContentAlignment="Center" 
-                        VerticalContentAlignment="Center"/>
+                        VerticalContentAlignment="Center"
+						
+						Command="{Binding ButtonClick}"
+                        CommandParameter="Burger"/>
               </StackPanel>
+				
               <StackPanel Grid.Column="2" Grid.Row="0">
                 <Button Width="150" Height="60" 
                         Classes="Main" Content="Бургер 3"
                         HorizontalContentAlignment="Center" 
-                        VerticalContentAlignment="Center"/>
+                        VerticalContentAlignment="Center"
+						
+						Command="{Binding ButtonClick}"
+                        CommandParameter="Burger"/>
               </StackPanel>
+				
               <StackPanel Grid.Column="0" Grid.Row="1">
                 <Button Width="150" Height="60" 
                         Classes="Main" Content="Бургер 4"
                         HorizontalContentAlignment="Center" 
-                        VerticalContentAlignment="Center"/>
+                        VerticalContentAlignment="Center"
+						
+						Command="{Binding ButtonClick}"
+                        CommandParameter="Burger"/>
               </StackPanel>
+				
               <StackPanel Grid.Column="1" Grid.Row="1">
                 <Button Width="150" Height="60" 
                         Classes="Main" Content="Бургер 5"
                         HorizontalContentAlignment="Center" 
-                        VerticalContentAlignment="Center"/>
+                        VerticalContentAlignment="Center"
+						
+						Command="{Binding ButtonClick}"
+                        CommandParameter="Burger"/>
               </StackPanel>
+				
               <StackPanel Grid.Column="2" Grid.Row="1">
                 <Button Width="150" Height="60" 
                         Classes="Main" Content="Бургер 6"
                         HorizontalContentAlignment="Center" 
-                        VerticalContentAlignment="Center"/>
+                        VerticalContentAlignment="Center"
+						
+						Command="{Binding ButtonClick}"
+                        CommandParameter="Burger"/>
               </StackPanel>
+				
               <StackPanel Grid.Column="0" Grid.Row="2">
                 <Button Width="150" Height="60" 
                         Classes="Main" Content="Бургер 7"
                         HorizontalContentAlignment="Center" 
-                        VerticalContentAlignment="Center"/>
+                        VerticalContentAlignment="Center"
+						
+						Command="{Binding ButtonClick}"
+                        CommandParameter="Burger"/>
               </StackPanel>
+				
               <StackPanel Grid.Column="1" Grid.Row="2">
                 <Button Width="150" Height="60" 
                         Classes="Main" Content="Бургер 8"
                         HorizontalContentAlignment="Center" 
-                        VerticalContentAlignment="Center"/>
+                        VerticalContentAlignment="Center"
+						
+						Command="{Binding ButtonClick}"
+                        CommandParameter="Burger"/>
               </StackPanel>
+				
               <StackPanel Grid.Column="2" Grid.Row="2">
                 <Button Width="150" Height="60" 
                         Classes="Main" Content="Бургер 9"
                         HorizontalContentAlignment="Center" 
-                        VerticalContentAlignment="Center"/>
+                        VerticalContentAlignment="Center"
+						
+						Command="{Binding ButtonClick}"
+                        CommandParameter="Burger"/>
               </StackPanel>
 
               <StackPanel Grid.Column="0" Grid.Row="3">
                 <Button Width="150" Height="60" 
                         Classes="Main" Content="Напиток 1"
                         HorizontalContentAlignment="Center" 
-                        VerticalContentAlignment="Center"/>
+                        VerticalContentAlignment="Center"
+						
+						Command="{Binding ButtonClick}"
+                        CommandParameter="Drink"/>
               </StackPanel>
+				
               <StackPanel Grid.Column="1" Grid.Row="3">
                 <Button Width="150" Height="60" 
                         Classes="Main" Content="Напиток 2"
                         HorizontalContentAlignment="Center" 
-                        VerticalContentAlignment="Center"/>
+                        VerticalContentAlignment="Center"
+						
+						Command="{Binding ButtonClick}"
+                        CommandParameter="Drink"/>
               </StackPanel>
+				
               <StackPanel Grid.Column="2" Grid.Row="3">
                 <Button Width="150" Height="60" 
                         Classes="Main" Content="Напиток 3"
                         HorizontalContentAlignment="Center" 
-                        VerticalContentAlignment="Center"/>
+                        VerticalContentAlignment="Center"
+						
+						Command="{Binding ButtonClick}"
+                        CommandParameter="Drink"/>
               </StackPanel>
+				
               <StackPanel Grid.Column="0" Grid.Row="4">
                 <Button Width="150" Height="60" 
                         Classes="Main" Content="Напиток 4"
                         HorizontalContentAlignment="Center" 
-                        VerticalContentAlignment="Center"/>
+                        VerticalContentAlignment="Center"
+						
+						Command="{Binding ButtonClick}"
+                        CommandParameter="Drink"/>
               </StackPanel>
+				
               <StackPanel Grid.Column="1" Grid.Row="4">
                 <Button Width="150" Height="60" 
                         Classes="Main" Content="Напиток 5"
                         HorizontalContentAlignment="Center" 
-                        VerticalContentAlignment="Center"/>
+                        VerticalContentAlignment="Center"
+						
+						Command="{Binding ButtonClick}"
+                        CommandParameter="Drink"/>
               </StackPanel>
+				
               <StackPanel Grid.Column="2" Grid.Row="4">
                 <Button Width="150" Height="60" 
                         Classes="Main" Content="Напиток 6"
                         HorizontalContentAlignment="Center" 
-                        VerticalContentAlignment="Center"/>
+                        VerticalContentAlignment="Center"
+						
+						Command="{Binding ButtonClick}"
+                        CommandParameter="Drink"/>
               </StackPanel>
+				
               <StackPanel Grid.Column="0" Grid.Row="5">
                 <Button Width="150" Height="60" 
                         Classes="Main" Content="Напиток 7"
                         HorizontalContentAlignment="Center" 
-                        VerticalContentAlignment="Center"/>
+                        VerticalContentAlignment="Center"
+						
+						Command="{Binding ButtonClick}"
+                        CommandParameter="Drink"/>
               </StackPanel>
+				
               <StackPanel Grid.Column="1" Grid.Row="5">
                 <Button Width="150" Height="60" 
                         Classes="Main" Content="Напиток 8"
                         HorizontalContentAlignment="Center" 
-                        VerticalContentAlignment="Center"/>
+                        VerticalContentAlignment="Center"
+						
+						Command="{Binding ButtonClick}"
+                        CommandParameter="Drink"/>
               </StackPanel>
+				
               <StackPanel Grid.Column="2" Grid.Row="5">
                 <Button Width="150" Height="60" 
                         Classes="Main" Content="Напиток 9"
                         HorizontalContentAlignment="Center" 
-                        VerticalContentAlignment="Center"/>
+                        VerticalContentAlignment="Center"
+						
+						Command="{Binding ButtonClick}"
+                        CommandParameter="Drink"/>
               </StackPanel>
 
             </Grid>
@@ -174,10 +245,12 @@
               Width="820" Height="5" Background="Black"/>
       <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Left"
                           Grid.Row="6" Grid.Column="2" Orientation="Horizontal">
+		  
         <TextBlock Margin="5,0,5,0" HorizontalAlignment="Center"
-          VerticalAlignment="Center" Text="Цена:"/>
+                   VerticalAlignment="Center" Text="Цена:"/>
+		  
         <TextBlock HorizontalAlignment="Center"
-                   VerticalAlignment="Center" Text="0"/>
+                   VerticalAlignment="Center" Text="{Binding Price}"/>
       </StackPanel>
       <StackPanel HorizontalAlignment="Right" Grid.Row="1"
                   Orientation="Horizontal">
