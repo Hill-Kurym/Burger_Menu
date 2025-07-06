@@ -3,13 +3,15 @@
         xmlns:vm="using:Burger_Menu.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="825" d:DesignHeight="480"
-        Width="825" Height="480" CanResize="False"
+        mc:Ignorable="d" 
+        WindowState="Maximized"
+        WindowStartupLocation="CenterScreen"
+        CanResize="False"
+        Width="1920" Height="900"
         x:Class="Burger_Menu.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
         Title="Burger_Menu">
-
 
   <Window.Styles>
     <StyleInclude Source="/MainWindowStyles.axaml"/>
@@ -23,14 +25,14 @@
                  FontSize="24"/>
     </StackPanel>
     <StackPanel Grid.Row="1">
-      <Grid ColumnDefinitions="5*,Auto,*">
+      <Grid ColumnDefinitions="5*,Auto,*" Margin="20">
         <ScrollViewer >
           <StackPanel Grid.Column="0">
             <Grid ColumnDefinitions="*,*,*"
                   RowDefinitions="*,*,*,*,*,*,*,*,*">
 				
               <StackPanel Grid.Column="0" Grid.Row="0">
-                <Button HorizontalContentAlignment="Center" 
+                <Button HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
                         Width="150" Height="60" Classes="Main" 
                         Content="Бургер 1"
@@ -60,7 +62,7 @@
               </StackPanel>
 				
               <StackPanel Grid.Column="0" Grid.Row="1">
-                <Button Width="150" Height="60" 
+                <Button Width="150" 
                         Classes="Main" Content="Бургер 4"
                         HorizontalContentAlignment="Center" 
                         VerticalContentAlignment="Center"
@@ -70,7 +72,7 @@
               </StackPanel>
 				
               <StackPanel Grid.Column="1" Grid.Row="1">
-                <Button Width="150" Height="60" 
+                <Button Width="150" 
                         Classes="Main" Content="Бургер 5"
                         HorizontalContentAlignment="Center" 
                         VerticalContentAlignment="Center"
@@ -80,7 +82,7 @@
               </StackPanel>
 				
               <StackPanel Grid.Column="2" Grid.Row="1">
-                <Button Width="150" Height="60" 
+                <Button Width="150" 
                         Classes="Main" Content="Бургер 6"
                         HorizontalContentAlignment="Center" 
                         VerticalContentAlignment="Center"
@@ -119,8 +121,10 @@
                         CommandParameter="Burger"/>
               </StackPanel>
 
+              
+
               <StackPanel Grid.Column="0" Grid.Row="3">
-                <Button Width="150" Height="60" 
+                <Button Width="150" 
                         Classes="Main" Content="Напиток 1"
                         HorizontalContentAlignment="Center" 
                         VerticalContentAlignment="Center"
@@ -130,7 +134,7 @@
               </StackPanel>
 				
               <StackPanel Grid.Column="1" Grid.Row="3">
-                <Button Width="150" Height="60" 
+                <Button Width="150" 
                         Classes="Main" Content="Напиток 2"
                         HorizontalContentAlignment="Center" 
                         VerticalContentAlignment="Center"
@@ -140,7 +144,7 @@
               </StackPanel>
 				
               <StackPanel Grid.Column="2" Grid.Row="3">
-                <Button Width="150" Height="60" 
+                <Button Width="150" 
                         Classes="Main" Content="Напиток 3"
                         HorizontalContentAlignment="Center" 
                         VerticalContentAlignment="Center"
@@ -150,7 +154,7 @@
               </StackPanel>
 				
               <StackPanel Grid.Column="0" Grid.Row="4">
-                <Button Width="150" Height="60" 
+                <Button Width="150" 
                         Classes="Main" Content="Напиток 4"
                         HorizontalContentAlignment="Center" 
                         VerticalContentAlignment="Center"
@@ -160,7 +164,7 @@
               </StackPanel>
 				
               <StackPanel Grid.Column="1" Grid.Row="4">
-                <Button Width="150" Height="60" 
+                <Button Width="150" 
                         Classes="Main" Content="Напиток 5"
                         HorizontalContentAlignment="Center" 
                         VerticalContentAlignment="Center"
@@ -170,7 +174,7 @@
               </StackPanel>
 				
               <StackPanel Grid.Column="2" Grid.Row="4">
-                <Button Width="150" Height="60" 
+                <Button Width="150"
                         Classes="Main" Content="Напиток 6"
                         HorizontalContentAlignment="Center" 
                         VerticalContentAlignment="Center"
@@ -216,33 +220,35 @@
           <ScrollViewer>
             <Grid RowDefinitions="*,*,*,*">
               <Button HorizontalContentAlignment="Center"
-                      VerticalContentAlignment="Center" 
-                      Width="120" Height="40" 
+                      VerticalContentAlignment="Center"
+                      Width="212" Height="50"
+                      Margin="30,4"
                       Classes="Main" Grid.Row="0" Content="Всё меню"/>
               <Button HorizontalContentAlignment="Center"
-                      VerticalContentAlignment="Center" 
-                      Width="120" Height="40" 
-                      Classes="Main" Grid.Row="1" Content="Бургеры"/>
+                      VerticalContentAlignment="Center"
+                      Width="212" Height="50"
+                      Margin="30,4"
+                      Classes="Main" Grid.Row="1" Content="Бургеры"
+                      Click="SwitchToBurgers"/>
               <Button HorizontalContentAlignment="Center"
-                      VerticalContentAlignment="Center" 
-                      Width="120" Height="40" 
-                      Classes="Main" Grid.Row="2" Content="Напитки"/>
+                      VerticalContentAlignment="Center"
+                      Width="212" Height="50"
+                      Margin="30,4"
+                      Classes="Main" Grid.Row="2" Content="Напитки"
+                      Click="SwitchToDrincs"/>
             </Grid>
           </ScrollViewer>
         </StackPanel>
         <StackPanel Grid.Column="1">
-          <Border BorderBrush="Black" BorderThickness="1" 
-                  Width="5" Height="470" Background="Black"/>
+          <Border BorderBrush="Black" BorderThickness="1"
+                  Width="5" Height="1000" Background="Black"/>
         </StackPanel>
       </Grid>
     </StackPanel>
     <Grid ColumnDefinitions="5*,*" RowDefinitions="*,*" Grid.Row="2">
-      <Border Grid.Row="0" Grid.Column="0"
-              BorderBrush="Black" BorderThickness="1"
-              Width="820" Height="5" Background="Black"/>
       <Border Grid.Row="0" Grid.Column="1"
               BorderBrush="Black" BorderThickness="1"
-              Width="820" Height="5" Background="Black"/>
+              Width="4000" Height="5" Background="Black"/>
       <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Left"
                           Grid.Row="6" Grid.Column="2" Orientation="Horizontal">
 		  

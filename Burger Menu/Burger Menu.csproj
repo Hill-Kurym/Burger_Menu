@@ -24,4 +24,8 @@
     </PackageReference>
     <PackageReference Include="Avalonia.ReactiveUI" Version="11.3.0" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Assets\Burger and drinkc jpgs\" />
+  </ItemGroup>
 </Project>

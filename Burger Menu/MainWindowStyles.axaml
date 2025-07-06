@@ -7,8 +7,7 @@
   </Design.PreviewWith>
 
   <Style Selector="Button.Main">
-    <Setter Property="Margin" Value="5"/>
-    <Setter Property="Padding" Value="5"/>
+    <Setter Property="Margin" Value="40,20"/>
     <Setter Property="Background" Value="#2D2D30"/>
     <Setter Property="Foreground" Value="#FFFFFF"/>
   </Style>
