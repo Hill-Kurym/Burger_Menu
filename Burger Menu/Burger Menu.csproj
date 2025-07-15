@@ -27,5 +27,7 @@
 
   <ItemGroup>
     <Folder Include="Assets\Burger and drinkc jpgs\" />
+    <Folder Include="Assets\Fonts\" />
+    <Folder Include="Assets\Background\" />
   </ItemGroup>
 </Project>

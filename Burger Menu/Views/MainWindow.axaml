@@ -17,278 +17,66 @@
     <StyleInclude Source="/MainWindowStyles.axaml"/>
   </Window.Styles>
 
-  <Grid RowDefinitions="Auto,*,Auto">
-  
-    <StackPanel Grid.Row="1">
-      <Grid ColumnDefinitions="5*,Auto,*" Margin="20">
-        <ContentControl x:Name="PageConteiner">
-          <StackPanel Grid.Column="0">
-            <Grid RowDefinitions="Auto,Auto">
-              <TextBlock Grid.Row="0" Text="Burger Menu:Всё меню"
-           HorizontalAlignment="Center"
-           Padding="5"
-           FontSize="24"/>
-            <Grid Grid.Row="1" ColumnDefinitions="*,*,*"
-                  RowDefinitions="*,*,*,*,*,*,*,*,*">
-              <StackPanel Grid.Column="0" Grid.Row="0">
-                <Button HorizontalContentAlignment="Center"
-                        VerticalContentAlignment="Center"
-                        Width="150" Classes="Main"
+  <Grid RowDefinitions="Auto,Auto">
+    <Grid.Background>
+      <ImageBrush Source="/Assets/Background/Paper.png" Stretch="UniformToFill"/>
+    </Grid.Background>
 
-                
-
-                Command="{Binding ButtonClick}"
-                CommandParameter="Burger">
-                  <StackPanel>
-                    <Image  Height="120" HorizontalAlignment="Stretch"
-                           VerticalAlignment="Stretch"
-                      Source="/Assets/Burger and drinkc jpgs/Воппер.png"/>
-                    <TextBlock Text="Воппер" HorizontalAlignment="Center"/>
-                  </StackPanel>
-                </Button>
-              </StackPanel>
-
-              <StackPanel Grid.Column="1" Grid.Row="0">
-                <Button Width="150"
-                        Classes="Main"
-                        HorizontalContentAlignment="Center"
-                VerticalContentAlignment="Center"
-
-                Command="{Binding ButtonClick}"
-                CommandParameter="Burger">
-                  <StackPanel>
-                    <Image Height="120" HorizontalAlignment="Stretch"
-                           VerticalAlignment="Stretch"
-                      Source="avares://Burger Menu/Assets/Burger and drinkc jpgs/Воппер с сыром.png"/>
-                    <TextBlock Text="Воппер с сыром" HorizontalAlignment="Center"/>
-                  </StackPanel>
-                </Button>
-              </StackPanel>
-
-              <StackPanel Grid.Column="2" Grid.Row="0">
-                <Button Width="150"
-                        Classes="Main"
-                        HorizontalContentAlignment="Center"
-                        VerticalContentAlignment="Center"
-
-                Command="{Binding ButtonClick}"
-                CommandParameter="Burger">
-                  <StackPanel>
-                    <Image Height="120" HorizontalAlignment="Stretch"
-                           VerticalAlignment="Stretch"
-                      Source="avares://Burger Menu/Assets/Burger and drinkc jpgs/Воппер джуниор.png"/>
-                    <TextBlock Text="Воппер джуниор" HorizontalAlignment="Center"/>
-                  </StackPanel>
-                </Button>
-              </StackPanel>
-
-              <StackPanel Grid.Column="0" Grid.Row="1">
-                <Button Width="150"
-                        Classes="Main" Content="Бургер 4"
-                        HorizontalContentAlignment="Center"
-                        VerticalContentAlignment="Center"
-
-                Command="{Binding ButtonClick}"
-                CommandParameter="Burger">
-                  <StackPanel>
-                    <Image Height="120" HorizontalAlignment="Stretch"
-                           VerticalAlignment="Stretch"
-                      Source="avares://Burger Menu/Assets/Burger and drinkc jpgs/Стейкхаус.png"/>
-                    <TextBlock Text="Стейкхаус" HorizontalAlignment="Center"/>
-                  </StackPanel>
-                </Button>
-              </StackPanel>
-
-              <StackPanel Grid.Column="1" Grid.Row="1">
-                <Button Width="150"
-                        Classes="Main" Content="Бургер 5"
-                        HorizontalContentAlignment="Center"
-                        VerticalContentAlignment="Center"
-
-                Command="{Binding ButtonClick}"
-                CommandParameter="Burger">
-                  <StackPanel>
-                    <Image Height="120" HorizontalAlignment="Stretch"
-                           VerticalAlignment="Stretch"
-                      Source="avares://Burger Menu/Assets/Burger and drinkc jpgs/Криспи Чикен.png"/>
-                    <TextBlock Text="Криспи Чикен" HorizontalAlignment="Center"/>
-                  </StackPanel>
-                </Button>
-              </StackPanel>
-
-              <StackPanel Grid.Column="2" Grid.Row="1">
-                <Button Width="150"
-                        Classes="Main" Content="Бургер 6"
-                        HorizontalContentAlignment="Center"
-                        VerticalContentAlignment="Center"
-
-                Command="{Binding ButtonClick}"
-                CommandParameter="Burger">
-                  <StackPanel>
-                    <Image Height="120" HorizontalAlignment="Stretch"
-                           VerticalAlignment="Stretch"
-                      Source="avares://Burger Menu/Assets/Burger and drinkc jpgs/Чизбургер.png"/>
-                    <TextBlock Text="Чизбургер" HorizontalAlignment="Center"/>
-                  </StackPanel>
-                </Button>
-              </StackPanel>
-
-              <StackPanel Grid.Column="0" Grid.Row="3">
-                <Button Width="150"
-                        Classes="Main" Content="Напиток 1"
-                        HorizontalContentAlignment="Center"
-                        VerticalContentAlignment="Center"
-
-                Command="{Binding ButtonClick}"
-                CommandParameter="Drink">
-                  <StackPanel>
-                    <Image Height="120" HorizontalAlignment="Stretch"
-                           VerticalAlignment="Stretch"
-                      Source="avares://Burger Menu/Assets/Burger and drinkc jpgs/КОКАКОЛА.png"/>
-                    <TextBlock Text="Кока-Кола" HorizontalAlignment="Center"/>
-                  </StackPanel>
-                </Button>
-              </StackPanel>
-
-              <StackPanel Grid.Column="1" Grid.Row="3">
-                <Button Width="150"
-                        Classes="Main" Content="Напиток 2"
-                        HorizontalContentAlignment="Center"
-                        VerticalContentAlignment="Center"
-
-                Command="{Binding ButtonClick}"
-                CommandParameter="Drink">
-                  <StackPanel>
-                    <Image Height="120" HorizontalAlignment="Stretch"
-                           VerticalAlignment="Stretch"
-                      Source="avares://Burger Menu/Assets/Burger and drinkc jpgs/СПРАЙТ.png"/>
-                    <TextBlock Text="Спрайт" HorizontalAlignment="Center"/>
-                  </StackPanel>
-                </Button>
-              </StackPanel>
-
-              <StackPanel Grid.Column="2" Grid.Row="3">
-                <Button Width="150"
-                        Classes="Main" Content="Напиток 3"
-                        HorizontalContentAlignment="Center"
-                        VerticalContentAlignment="Center"
-
-                Command="{Binding ButtonClick}"
-                CommandParameter="Drink">
-                  <StackPanel>
-                    <Image Height="120" HorizontalAlignment="Stretch"
-                           VerticalAlignment="Stretch"
-                      Source="avares://Burger Menu/Assets/Burger and drinkc jpgs/ФАНТА.png"/>
-                    <TextBlock Text="Фанта" HorizontalAlignment="Center"/>
-                  </StackPanel>
-                </Button>
-              </StackPanel>
-
-              <StackPanel Grid.Column="0" Grid.Row="4">
-                <Button Width="150"
-                        Classes="Main" Content="Напиток 4"
-                        HorizontalContentAlignment="Center"
-                        VerticalContentAlignment="Center"
-
-                Command="{Binding ButtonClick}"
-                CommandParameter="Drink">
-                  <StackPanel>
-                    <Image Height="120" HorizontalAlignment="Stretch"
-                           VerticalAlignment="Stretch"
-                      Source="avares://Burger Menu/Assets/Burger and drinkc jpgs/FUSE TEA.png"/>
-                    <TextBlock Text="Fuse tea" HorizontalAlignment="Center"/>
-                  </StackPanel>
-                </Button>
-              </StackPanel>
-
-              <StackPanel Grid.Column="1" Grid.Row="4">
-                <Button Width="150"
-                        Classes="Main" Content="Напиток 5"
-                        HorizontalContentAlignment="Center"
-                        VerticalContentAlignment="Center"
-
-                Command="{Binding ButtonClick}"
-                CommandParameter="Drink">
-                  <StackPanel>
-                    <Image Height="120" HorizontalAlignment="Stretch"
-                           VerticalAlignment="Stretch"
-                      Source="avares://Burger Menu/Assets/Burger and drinkc jpgs/КОФЕ.png"/>
-                    <TextBlock Text="Кофе" HorizontalAlignment="Center"/>
-                  </StackPanel>
-                </Button>
-              </StackPanel>
-
-              <StackPanel Grid.Column="2" Grid.Row="4">
-                <Button Width="150"
-                        Classes="Main" Content="Напиток 6"
-                        HorizontalContentAlignment="Center"
-                        VerticalContentAlignment="Center"
-
-                Command="{Binding ButtonClick}"
-                CommandParameter="Drink">
-                  <StackPanel>
-                    <Image Height="120" HorizontalAlignment="Stretch"
-                           VerticalAlignment="Stretch"
-                      Source="avares://Burger Menu/Assets/Burger and drinkc jpgs/МИНЕРАЛЬНАЯ ВОДА.png"/>
-                    <TextBlock Text="Минеральная Вода" HorizontalAlignment="Center"/>
-                  </StackPanel>
-                </Button>
-              </StackPanel>
-
-            </Grid>
-            </Grid>
-          </StackPanel>
-        </ContentControl>
-        <StackPanel Grid.Column="2">
-          <ScrollViewer>
-            <Grid RowDefinitions="*,*,*,*">
-              <Button HorizontalContentAlignment="Center"
-                      VerticalContentAlignment="Center"
-                      Width="212" Height="50"
-                      Margin="30,4"
-                      Classes="Main" Grid.Row="0" Content="Всё меню"
-                      Click="SwitchToMain"/>
-              <StackPanel Grid.Row="1">
-                <Button HorizontalContentAlignment="Center"
-                        VerticalContentAlignment="Center"
-                        Width="212" Height="50"
-                        Margin="30,4"
-                        Classes="Main" Grid.Row="1" Content="Бургеры"
-                        Click="SwitchToBurger"/>
-                <ContentControl x:Name="MainContent"/>
-              </StackPanel>
-              <Button HorizontalContentAlignment="Center"
-                      VerticalContentAlignment="Center"
-                      Width="212" Height="50"
-                      Margin="30,4"
-                      Classes="Main" Grid.Row="2" Content="Напитки"
-                      Click="SwitchToDrincks"/>
-            </Grid>
-          </ScrollViewer>
+    <StackPanel Grid.Column="0" >
+      <Border Background="#E53935" Width="10000" CornerRadius="15"
+              Height="42" HorizontalAlignment="Center"
+              VerticalAlignment="Center">
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+          <TextBlock Text="🍔Burger Menu -"
+                 Foreground="White"
+                 FontSize="28"
+                 FontWeight="Bold"
+                 HorizontalAlignment=""/>
+          <ContentControl x:Name="TitleContent"
+          HorizontalAlignment="Center"
+          VerticalAlignment="Center">
+          </ContentControl>
         </StackPanel>
-        <StackPanel Grid.Column="1">
-          <Border BorderBrush="Black" BorderThickness="1"
-                  Width="5" Height="1000" Background="Black"/>
-        </StackPanel>
-      </Grid>
+      </Border>
     </StackPanel>
-    <Grid ColumnDefinitions="5*,*" RowDefinitions="*,*" Grid.Row="2">
-      <Border Grid.Row="0" Grid.Column="1"
-              BorderBrush="Black" BorderThickness="1"
-              Width="4000" Height="5" Background="Black"/>
-      <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Left"
-                          Grid.Row="6" Grid.Column="2" Orientation="Horizontal">
-
-        <TextBlock Margin="5,0,5,0" HorizontalAlignment="Center"
-                   VerticalAlignment="Center" Text="Цена:"/>
-
-        <TextBlock HorizontalAlignment="Center"
-                   VerticalAlignment="Center" Text="{Binding Price}"/>
+    <Grid Grid.Row="1" ColumnDefinitions="*,6*">
+      <StackPanel Grid.Column="0" Background="#2D2D30" 
+ Height="1000">
+        <Grid RowDefinitions="*,*,*,Auto,Auto">
+          <Button HorizontalContentAlignment="Center"
+                  VerticalContentAlignment="Center"
+                  Width="212" Height="50"
+                  Margin="0,4"
+                  Classes="Main" Grid.Row="0" Content="Всё меню"
+                  Click="SwitchToMain"/>
+          <StackPanel Grid.Row="1">
+            <Button HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Width="212" Height="50"
+                    Margin="0,4"
+                    Classes="Main" Grid.Row="1" Content="Бургеры"
+                    Click="SwitchToBurger"/>
+          </StackPanel>
+          <Button HorizontalContentAlignment="Center"
+                  VerticalContentAlignment="Center"
+                  Width="212" Height="50"
+                  Margin="0,4"
+                  Classes="Main" Grid.Row="2" Content="Напитки"
+                  Click="SwitchToDrincks"/>
+          <Border Grid.Row="3" Background="#2D2D30" Height="622"/>
+          <Button Content="Заказать" Grid.Row="4" 
+                  HorizontalContentAlignment="Center"
+                  VerticalContentAlignment="Center"
+                  Width="210" Height="50"
+                  Background="Red"
+                  Margin="4,4"/>
+        </Grid>
       </StackPanel>
-      <StackPanel HorizontalAlignment="Right" Grid.Row="1"
-                  Orientation="Horizontal">
-        <TextBlock HorizontalAlignment="Center"
-                   VerticalAlignment="Center" Text=""/>
+
+      <StackPanel Grid.Column="1">
+        <ContentControl x:Name="PageConteiner">
+        </ContentControl>
       </StackPanel>
     </Grid>
   </Grid>
