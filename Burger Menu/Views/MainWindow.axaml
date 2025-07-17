@@ -3,6 +3,7 @@
         xmlns:vm="using:Burger_Menu.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:views="clr-namespace:Burger_Menu.Views.Pages"
         mc:Ignorable="d"
         WindowState="Maximized"
         WindowStartupLocation="CenterScreen"
@@ -12,7 +13,7 @@
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
         Title="Burger_Menu">
-
+  
   <Window.Styles>
     <StyleInclude Source="/MainWindowStyles.axaml"/>
   </Window.Styles>
@@ -48,22 +49,19 @@
                   VerticalContentAlignment="Center"
                   Width="212" Height="50"
                   Margin="0,4"
-                  Classes="Main" Grid.Row="0" Content="Всё меню"
-                  Click="SwitchToMain"/>
+                  Classes="Main" Grid.Row="0" Content="Всё меню"/>
           <StackPanel Grid.Row="1">
             <Button HorizontalContentAlignment="Center"
                     VerticalContentAlignment="Center"
                     Width="212" Height="50"
                     Margin="0,4"
-                    Classes="Main" Grid.Row="1" Content="Бургеры"
-                    Click="SwitchToBurger"/>
+                    Classes="Main" Grid.Row="1" Content="Бургеры"/>
           </StackPanel>
           <Button HorizontalContentAlignment="Center"
                   VerticalContentAlignment="Center"
                   Width="212" Height="50"
                   Margin="0,4"
-                  Classes="Main" Grid.Row="2" Content="Напитки"
-                  Click="SwitchToDrincks"/>
+                  Classes="Main" Grid.Row="2" Content="Напитки"/>
           <Border Grid.Row="3" Background="#2D2D30" Height="622"/>
           <Button Content="Заказать" Grid.Row="4" 
                   HorizontalContentAlignment="Center"
@@ -75,7 +73,7 @@
       </StackPanel>
 
       <StackPanel Grid.Column="1">
-        <ContentControl x:Name="PageConteiner">
+        <ContentControl x:Name="PageContainer" Content="{Binding CurrentView}">
         </ContentControl>
       </StackPanel>
     </Grid>

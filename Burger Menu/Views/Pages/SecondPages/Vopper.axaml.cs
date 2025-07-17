@@ -10,6 +10,7 @@ namespace Burger_Menu
         public Vopper()
         {
             InitializeComponent();
+            DataContext = new ViewModels.VopperViewModel(); // ”станавливаем контекст данных дл€ страницы Vopper
         }
     }
 }

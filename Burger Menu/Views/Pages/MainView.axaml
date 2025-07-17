@@ -2,10 +2,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:vm="using:Burger_Menu.ViewModels"
+             xmlns:vm="using:Burger_Menu.ViewModels.ViewModelPages"
              mc:Ignorable="d" d:DesignWidth="1195" d:DesignHeight="450"
              x:Class="Burger_Menu.MainView"
-             x:DataType="vm:MainWindowViewModel">
+             x:DataType="vm:MainViewModel">
   <StackPanel Grid.Column="0">
 
 
