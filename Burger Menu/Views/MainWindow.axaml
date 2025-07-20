@@ -34,9 +34,13 @@
                  FontSize="28"
                  FontWeight="Bold"
                  HorizontalAlignment=""/>
-          <ContentControl x:Name="TitleContent"
-          HorizontalAlignment="Center"
-          VerticalAlignment="Center">
+          <TextBlock Text="{Binding Title}"
+            Foreground="White"
+            FontSize="21"
+            FontStyle="Italic"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"/>
+          <ContentControl x:Name="TitleContent">
           </ContentControl>
         </StackPanel>
       </Border>
@@ -49,26 +53,34 @@
                   VerticalContentAlignment="Center"
                   Width="212" Height="50"
                   Margin="0,4"
-                  Classes="Main" Grid.Row="0" Content="Всё меню"/>
+                  Classes="Main" Grid.Row="0" Content="Всё меню"
+                  Command="{Binding ShowMain}"/>
           <StackPanel Grid.Row="1">
             <Button HorizontalContentAlignment="Center"
                     VerticalContentAlignment="Center"
                     Width="212" Height="50"
                     Margin="0,4"
-                    Classes="Main" Grid.Row="1" Content="Бургеры"/>
+                    Classes="Main" Grid.Row="1" Content="Бургеры"
+                    Command="{Binding ShowBurger}"/>
           </StackPanel>
           <Button HorizontalContentAlignment="Center"
                   VerticalContentAlignment="Center"
                   Width="212" Height="50"
                   Margin="0,4"
-                  Classes="Main" Grid.Row="2" Content="Напитки"/>
-          <Border Grid.Row="3" Background="#2D2D30" Height="622"/>
+                  Classes="Main" Grid.Row="2" Content="Напитки"
+                  Command="{Binding ShowDrinck}"/>
+          <TextBlock Grid.Row="3"
+           Text="{Binding Price}"
+           Foreground="Black"
+           Background="White"/>
+          <Border Grid.Row="4" Background="#2D2D30" Height="850"/>
           <Button Content="Заказать" Grid.Row="4" 
                   HorizontalContentAlignment="Center"
                   VerticalContentAlignment="Center"
                   Width="210" Height="50"
                   Background="Red"
-                  Margin="4,4"/>
+                  Margin="4,4">
+          </Button>
         </Grid>
       </StackPanel>
 

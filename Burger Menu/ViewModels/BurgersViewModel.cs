@@ -7,21 +7,26 @@ using System.Reactive;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Burger_Menu.ViewModels.ViewModelPages
+namespace Burger_Menu.ViewModels
 {
-    internal class MainViewModel: ViewModelBase
+    internal class BurgersViewModel: ViewModelBase
     {
+        public ReactiveCommand<string, Unit> ButtonClick { get; }
+
         private string _price = "0"; // Переменная
         public string Price    // Поле
         {
             get => _price;
             set => this.RaiseAndSetIfChanged(ref _price, value); // Уведомляем интерфейс, при изменении поля
         }
-        public ReactiveCommand<string, Unit> ButtonClick { get; }
-        public MainViewModel()
+
+
+        public BurgersViewModel()
         {
             ButtonClick = ReactiveCommand.Create<string>(Calc);
         }
+
+
         private void Calc(string name)
         {
             MenuPrice menu = new MenuPrice();

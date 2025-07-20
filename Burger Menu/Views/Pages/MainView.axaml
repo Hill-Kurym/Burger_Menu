@@ -1,14 +1,13 @@
-<UserControl xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:vm="using:Burger_Menu.ViewModels.ViewModelPages"
-             mc:Ignorable="d" d:DesignWidth="1195" d:DesignHeight="450"
-             x:Class="Burger_Menu.MainView"
-             x:DataType="vm:MainViewModel">
+<UserControl
+    x:Class="Burger_Menu.Views.Pages.MainView"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="clr-namespace:Burger_Menu.ViewModels"
+    mc:Ignorable="d" d:DesignWidth="1195" d:DesignHeight="450"
+    x:DataType="vm:MainViewModel">
   <StackPanel Grid.Column="0">
-
-
     <ScrollViewer Height="900">
       <WrapPanel Margin="10">
 
@@ -38,6 +37,7 @@
                        Foreground="#808080"
                        HorizontalAlignment="Center"/>
             <Button Content="Добавить"
+              Command="{Binding ToVopper}"
               Background="#E53935"
               Foreground="White"
               CornerRadius="6"

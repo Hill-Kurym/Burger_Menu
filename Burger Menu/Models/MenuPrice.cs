@@ -18,8 +18,15 @@ namespace Burger_Menu.Models
         private readonly Dictionary<string, double> _menu = new Dictionary<string, double>(StringComparer.OrdinalIgnoreCase)
         {
             // Сразу добавим элементы в наше меню. Является плохим практисом, но допустимо в маленьких проектах 
-            ["Burger"] = 200,
-            ["Drink"] = 100,
+            ["Fries"] = 50,
+            ["Vopper"] = 290,
+            ["Cheeseburger"] = 250,
+            ["Double Cheeseburger"] = 350,
+            ["Chicken Burger"] = 300,
+            ["Veggie Burger"] = 220,
+            ["Milkshake"] = 150,
+            ["Soda"] = 80,
+            ["Water"] = 50,
 
             // Добавь сюда элементы, если хочешь расширить меню
         };

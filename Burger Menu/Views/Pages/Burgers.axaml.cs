@@ -2,12 +2,14 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 
-namespace Burger_Menu;
-
-public partial class Burgers : UserControl
+namespace Burger_Menu.Views.Pages
 {
-    public Burgers()
+
+    public partial class Burgers : UserControl
     {
-        InitializeComponent();
+        public Burgers()
+        {
+            InitializeComponent();
+        }
     }
 }

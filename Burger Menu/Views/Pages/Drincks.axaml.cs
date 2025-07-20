@@ -3,7 +3,7 @@ using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 
-namespace Burger_Menu
+namespace Burger_Menu.Views.Pages
 {
 
     public partial class Drincks : UserControl

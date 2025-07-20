@@ -2,14 +2,34 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="Burger_Menu.App"
              xmlns:local="using:Burger_Menu"
-             RequestedThemeVariant="Default">
-             <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
+             RequestedThemeVariant="Default"
+             xmlns:views="clr-namespace:Burger_Menu.Views.Pages"
+             xmlns:sviews="clr-namespace:Burger_Menu.Views.Pages.SecondPages"
+             xmlns:vm="clr-namespace:Burger_Menu.ViewModels">
+  <Application.DataTemplates>
+    <DataTemplate DataType="{x:Type vm:MainViewModel}">
+      <views:MainView />
+    </DataTemplate>
 
-    <Application.DataTemplates>
-        <local:ViewLocator/>
-    </Application.DataTemplates>
+    <DataTemplate DataType="{x:Type vm:BurgersViewModel}">
+      <views:Burgers />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:DrincksViewModel}">
+      <views:Drincks />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:VopperViewModel}">
+      <sviews:Vopper />
+    </DataTemplate>
+
+  </Application.DataTemplates>
   
-    <Application.Styles>
-        <FluentTheme />
-    </Application.Styles>
+    
+
+
+  
+  <Application.Styles>
+    <FluentTheme />
+  </Application.Styles>
 </Application>
