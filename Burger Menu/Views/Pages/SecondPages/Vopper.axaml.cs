@@ -1,6 +1,7 @@
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
+using Burger_Menu.ViewModels;
 
 namespace Burger_Menu.Views.Pages.SecondPages
 {
@@ -10,7 +11,7 @@ namespace Burger_Menu.Views.Pages.SecondPages
         public Vopper()
         {
             InitializeComponent();
-            DataContext = new ViewModels.VopperViewModel(); // ”станавливаем контекст данных дл€ страницы Vopper
+            this.DataContext = new VopperViewModel(new MainWindowViewModel());
         }
     }
 }

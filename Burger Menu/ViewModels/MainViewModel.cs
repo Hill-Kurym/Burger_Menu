@@ -36,7 +36,7 @@ namespace Burger_Menu.ViewModels
 
         private void ShowVopper()
         {
-            _mainWindow.CurrentView = new VopperViewModel();
+            _mainWindow.CurrentView = new VopperViewModel(_mainWindow);
             _mainWindow.Title = "Воппер";
         }
 
