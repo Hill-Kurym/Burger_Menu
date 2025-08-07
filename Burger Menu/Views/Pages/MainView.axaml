@@ -7,446 +7,569 @@
     xmlns:vm="clr-namespace:Burger_Menu.ViewModels"
     mc:Ignorable="d" d:DesignWidth="1195" d:DesignHeight="450"
     x:DataType="vm:MainViewModel">
-  <StackPanel Grid.Column="0">
-    <ScrollViewer Height="900">
+  <StackPanel Grid.Row="1">
+    <ScrollViewer Height="825">
       <WrapPanel Margin="10">
 
-        <Button Width="200"
-                Height="200"
+        <Button Width="300"
+                Height="300"
                 BorderThickness="0"
                 Background="Transparent"
                 
                 CornerRadius="12"
-                Padding="8"
-                Margin="20,0,20,15"
-                Command="{Binding ButtonClick}"
+
+                Margin="85,5,45,15"
                 CommandParameter="Burger"
                 RenderTransformOrigin="10,10">
 
           <StackPanel VerticalAlignment="Center" 
                       HorizontalAlignment="Center" Spacing="5">
 
-            <Image Height="120"
-                   Width="120"
+            <Image Height="190"
+                   Width="190"
                    Stretch="Uniform"
                    Source="/Assets/Burger and drinkc jpgs/Воппер.png"
                    HorizontalAlignment="Center"/>
             <TextBlock Text="Воппер"
-                       FontSize="18"
-                       FontWeight="Bold" 
-                       Foreground="#808080"
-                       HorizontalAlignment="Center"/>
-            <Button Content="Добавить"
-              Command="{Binding ToVopper}"
-              Background="#E53935"
-              Foreground="White"
-              CornerRadius="6"
-              FontSize="18"
-              FontWeight="SemiBold"
-              HorizontalAlignment="Center"
-              VerticalAlignment="Stretch"/>
+                       FontSize="35"
+                       FontWeight="ExtraBlack" 
+                       Foreground="Black"
+                       HorizontalAlignment="Center"
+                       Padding=""/>
+            <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Right">
+              <TextBlock Text="290"
+                         FontSize="30"
+                         FontFamily="Flame"/>
+              <TextBlock Text=" ₽" 
+                         FontFamily="Flame"
+                         FontSize="25"
+                         Padding="-10,-1,30,0"/>
+              <Button Content="Добавить"
+                      Command="{Binding ToVopper}"
+                      Background="#E53935"
+                      Foreground="White"
+                      CornerRadius="25"
+                      FontSize="20"
+                      FontWeight="SemiBold"
+                      VerticalAlignment="Center" />
+            </StackPanel>
           </StackPanel>
         </Button>
 
-        <Button Width="200"
-                        Height="200"
-                        BorderThickness="0"
-                        Background="Transparent"
+        <Button Width="300"
+                Height="300"
+                BorderThickness="0"
+                Background="Transparent"
                 
-                        CornerRadius="12"
-                        Padding="8"
-                        Margin="20,0,20,15"
-                        Command="{Binding ButtonClick}"
-                        CommandParameter="Burger"
-                        RenderTransformOrigin="10,10">
+                CornerRadius="12"
+
+                Margin="30,5,30,15"
+                CommandParameter="Burger"
+                RenderTransformOrigin="10,10">
 
           <StackPanel VerticalAlignment="Center"
                       HorizontalAlignment="Center" Spacing="5">
 
-            <Image Height="120"
-                   Width="120"
+            <Image Height="190"
+                   Width="190"
                    Stretch="Uniform"
                    Source="/Assets/Burger and drinkc jpgs/Воппер джуниор.png"
                    HorizontalAlignment="Center"/>
             <TextBlock Text="Воппер Джуниор"
-                       FontSize="18"
-                       FontWeight="Bold"
-                       Foreground="#808080"
-                       HorizontalAlignment="Center"/>
-            <Button Content="Добавить"
-              Background="#E53935"
-              Foreground="White"
-              CornerRadius="6"
-              FontSize="18"
-              FontWeight="SemiBold"
-              HorizontalAlignment="Center"
-              VerticalAlignment="Stretch"/>
+                       FontSize="32"
+                       FontWeight="ExtraBlack"
+                       Foreground="Black"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Padding=""/>
+            <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Right">
+              <TextBlock Text="290"
+                         FontSize="30"
+                         FontFamily="Flame"
+                         Padding="20,0,0,0"/>
+              <TextBlock Text=" ₽"
+                         FontFamily="Flame"
+                         FontSize="25"
+                         Padding="-10,-1,50,0"/>
+              <Button Content="Добавить"
+                      Command="{Binding ToVopper}"
+                      Background="#E53935"
+                      Foreground="White"
+                      CornerRadius="25"
+                      FontSize="20"
+                      FontWeight="SemiBold"
+                      Margin="0,0,45,0"
+                      VerticalAlignment="Center" />
+            </StackPanel>
           </StackPanel>
         </Button>
-        
-        <Button Width="200"
-                        Height="200"
-                        BorderThickness="0"
-                        Background="Transparent"
+
+        <Button Width="300"
+                Height="300"
+                BorderThickness="0"
+                Background="Transparent"
                 
-                        CornerRadius="12"
-                        Padding="8"
-                        Margin="20,0,20,15"
-                        Command="{Binding ButtonClick}"
-                        CommandParameter="Burger"
-                        RenderTransformOrigin="10,10">
+                CornerRadius="12"
+
+                Margin="90,5,30,15"
+                CommandParameter="Burger"
+                RenderTransformOrigin="10,10">
 
           <StackPanel VerticalAlignment="Center"
                       HorizontalAlignment="Center" Spacing="5">
 
-            <Image Height="120"
-                   Width="120"
-                   Stretch="Uniform"
-                   Source="/Assets/Burger and drinkc jpgs/Воппер с сыром.png"
-                   HorizontalAlignment="Center"/>
-            <TextBlock Text="Воппер с сыром"
-                       FontSize="18"
-                       FontWeight="Bold"
-                       Foreground="#808080"
-                       HorizontalAlignment="Center"/>
-            <Button Content="Добавить"
-              Background="#E53935"
-              Foreground="White"
-              CornerRadius="6"
-              FontSize="18"
-              FontWeight="SemiBold"
-              HorizontalAlignment="Center"
-              VerticalAlignment="Stretch"/>
-          </StackPanel>
-        </Button>
-        
-        <Button Width="200"
-                        Height="200"
-                        BorderThickness="0"
-                        Background="Transparent"
-                
-                        CornerRadius="12"
-                        Padding="8"
-                        Margin="20,0,20,15"
-                        Command="{Binding ButtonClick}"
-                        CommandParameter="Burger"
-                        RenderTransformOrigin="10,10">
-
-          <StackPanel VerticalAlignment="Center"
-                      HorizontalAlignment="Center" Spacing="5">
-
-            <Image Height="120"
-                   Width="120"
+            <Image Height="190"
+                   Width="190"
                    Stretch="Uniform"
                    Source="/Assets/Burger and drinkc jpgs/Криспи Чикен.png"
                    HorizontalAlignment="Center"/>
             <TextBlock Text="Криспи Чикен"
-                       FontSize="18"
-                       FontWeight="Bold"
-                       Foreground="#808080"
-                       HorizontalAlignment="Center"/>
-            <Button Content="Добавить"
-              Background="#E53935"
-              Foreground="White"
-              CornerRadius="6"
-              FontSize="18"
-              FontWeight="SemiBold"
-              HorizontalAlignment="Center"
-              VerticalAlignment="Stretch"/>
+                       FontSize="35"
+                       FontWeight="ExtraBlack"
+                       Foreground="Black"
+                       HorizontalAlignment="Center"
+                       Padding=""/>
+            <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Right">
+              <TextBlock Text="290"
+                         FontSize="30"
+                         FontFamily="Flame"/>
+              <TextBlock Text=" ₽"
+                         FontFamily="Flame"
+                         FontSize="25"
+                         Padding="-10,-1,30,0"/>
+              <Button Content="Добавить"
+                      Command="{Binding ToVopper}"
+                      Background="#E53935"
+                      Foreground="White"
+                      CornerRadius="25"
+                      FontSize="20"
+                      FontWeight="SemiBold"
+                      VerticalAlignment="Center" />
+            </StackPanel>
           </StackPanel>
         </Button>
-        
-        <Button Width="200"
-                        Height="200"
-                        BorderThickness="0"
-                        Background="Transparent"
+
+
+        <Button Width="300"
+                Height="300"
+                BorderThickness="0"
+                Background="Transparent"
                 
-                        CornerRadius="12"
-                        Padding="8"
-                        Margin="20,0,20,15"
-                        Command="{Binding ButtonClick}"
-                        CommandParameter="Burger"
-                        RenderTransformOrigin="10,10">
+                CornerRadius="12"
+
+                Margin="85,5,45,15"
+                CommandParameter="Burger"
+                RenderTransformOrigin="10,10">
 
           <StackPanel VerticalAlignment="Center"
                       HorizontalAlignment="Center" Spacing="5">
 
-            <Image Height="120"
-                   Width="120"
+            <Image Height="190"
+                   Width="190"
+                   Stretch="Uniform"
+                   Source="/Assets/Burger and drinkc jpgs/Воппер с сыром.png"
+                   HorizontalAlignment="Center"/>
+            <TextBlock Text="Воппер с сыром"
+                       FontSize="35"
+                       FontWeight="ExtraBlack"
+                       Foreground="Black"
+                       HorizontalAlignment="Center"
+                       Padding=""/>
+            <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Right">
+              <TextBlock Text="290"
+                         FontSize="30"
+                         FontFamily="Flame"/>
+              <TextBlock Text=" ₽"
+                         FontFamily="Flame"
+                         FontSize="25"
+                         Padding="-10,-1,30,0"/>
+              <Button Content="Добавить"
+                      Command="{Binding ToVopper}"
+                      Background="#E53935"
+                      Foreground="White"
+                      CornerRadius="25"
+                      FontSize="20"
+                      FontWeight="SemiBold"
+                      VerticalAlignment="Center" />
+            </StackPanel>
+          </StackPanel>
+        </Button>
+
+        <Button Width="300"
+                Height="300"
+                BorderThickness="0"
+                Background="Transparent"
+                
+                CornerRadius="12"
+
+                Margin="30,5,30,15"
+                CommandParameter="Burger"
+                RenderTransformOrigin="10,10">
+
+          <StackPanel VerticalAlignment="Center"
+                      HorizontalAlignment="Center" Spacing="5">
+
+            <Image Height="190"
+                   Width="190"
                    Stretch="Uniform"
                    Source="/Assets/Burger and drinkc jpgs/Стейкхаус.png"
                    HorizontalAlignment="Center"/>
             <TextBlock Text="Стейкхаус"
-                       FontSize="18"
-                       FontWeight="Bold"
-                       Foreground="#808080"
-                       HorizontalAlignment="Center"/>
-            <Button Content="Добавить"
-              Background="#E53935"
-              Foreground="White"
-              CornerRadius="6"
-              FontSize="18"
-              FontWeight="SemiBold"
-              HorizontalAlignment="Center"
-              VerticalAlignment="Stretch"/>
+                       FontSize="35"
+                       FontWeight="ExtraBlack"
+                       Foreground="Black"
+                       HorizontalAlignment="Center"
+                       Padding=""/>
+            <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Right">
+              <TextBlock Text="290"
+                         FontSize="30"
+                         FontFamily="Flame"/>
+              <TextBlock Text=" ₽"
+                         FontFamily="Flame"
+                         FontSize="25"
+                         Padding="-10,-1,30,0"/>
+              <Button Content="Добавить"
+                      Command="{Binding ToVopper}"
+                      Background="#E53935"
+                      Foreground="White"
+                      CornerRadius="25"
+                      FontSize="20"
+                      FontWeight="SemiBold"
+                      VerticalAlignment="Center" />
+            </StackPanel>
           </StackPanel>
         </Button>
-        
-        <Button Width="200"
-                        Height="200"
-                        BorderThickness="0"
-                        Background="Transparent"
+
+        <Button Width="300"
+                Height="300"
+                BorderThickness="0"
+                Background="Transparent"
                 
-                        CornerRadius="12"
-                        Padding="8"
-                        Margin="20,0,20,15"
-                        Command="{Binding ButtonClick}"
-                        CommandParameter="Burger"
-                        RenderTransformOrigin="10,10">
+                CornerRadius="12"
+
+                Margin="90,5,30,15"
+                CommandParameter="Burger"
+                RenderTransformOrigin="10,10">
 
           <StackPanel VerticalAlignment="Center"
                       HorizontalAlignment="Center" Spacing="5">
 
-            <Image Height="120"
-                   Width="120"
+            <Image Height="190"
+                   Width="190"
                    Stretch="Uniform"
                    Source="/Assets/Burger and drinkc jpgs/Чизбургер.png"
                    HorizontalAlignment="Center"/>
             <TextBlock Text="Чизбургер"
-                       FontSize="18"
-                       FontWeight="Bold"
-                       Foreground="#808080"
-                       HorizontalAlignment="Center"/>
-            <Button Content="Добавить"
-              Background="#E53935"
-              Foreground="White"
-              CornerRadius="6"
-              FontSize="18"
-              FontWeight="SemiBold"
-              HorizontalAlignment="Center"
-              VerticalAlignment="Stretch"/>
+                       FontSize="35"
+                       FontWeight="ExtraBlack"
+                       Foreground="Black"
+                       HorizontalAlignment="Center"
+                       Padding=""/>
+            <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Right">
+              <TextBlock Text="290"
+                         FontSize="30"
+                         FontFamily="Flame"/>
+              <TextBlock Text=" ₽"
+                         FontFamily="Flame"
+                         FontSize="25"
+                         Padding="-10,-1,30,0"/>
+              <Button Content="Добавить"
+                      Command="{Binding ToVopper}"
+                      Background="#E53935"
+                      Foreground="White"
+                      CornerRadius="25"
+                      FontSize="20"
+                      FontWeight="SemiBold"
+                      VerticalAlignment="Center" />
+            </StackPanel>
           </StackPanel>
         </Button>
 
 
-
-        <Button Width="200"
-                      Height="200"
-                      BorderThickness="0"
-                      Background="Transparent"
+        <Button Width="300"
+                 Height="300"
+                 BorderThickness="0"
+                 Background="Transparent"
                 
-                      CornerRadius="12"
-                      Padding="8"
-                      Margin="20,0,20,15"
-                      Command="{Binding ButtonClick}"
-                      CommandParameter="Burger"
-                      RenderTransformOrigin="10,10">
+                 CornerRadius="12"
+
+                 Margin="85,5,45,15"
+                 CommandParameter="Burger"
+                 RenderTransformOrigin="10,10">
 
           <StackPanel VerticalAlignment="Center"
                       HorizontalAlignment="Center" Spacing="5">
 
-            <Image Height="120"
-                   Width="120"
+            <Image Height="190"
+                   Width="190"
                    Stretch="Uniform"
                    Source="/Assets/Burger and drinkc jpgs/КОКАКОЛА.png"
                    HorizontalAlignment="Center"/>
             <TextBlock Text="Кока-Кола"
-                       FontSize="18"
-                       FontWeight="Bold"
-                       Foreground="#808080"
-                       HorizontalAlignment="Center"/>
-            <Button Content="Добавить"
-              Background="#E53935"
-              Foreground="White"
-              CornerRadius="6"
-              FontSize="18"
-              FontWeight="SemiBold"
-              HorizontalAlignment="Center"
-              VerticalAlignment="Stretch"/>
+                       FontSize="35"
+                       FontWeight="ExtraBlack"
+                       Foreground="Black"
+                       HorizontalAlignment="Center"
+                       Padding=""/>
+            <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Right">
+              <TextBlock Text="290"
+                         FontSize="30"
+                         FontFamily="Flame"/>
+              <TextBlock Text=" ₽"
+                         FontFamily="Flame"
+                         FontSize="25"
+                         Padding="-10,-1,30,0"/>
+              <Button Content="Добавить"
+                      Command="{Binding ToVopper}"
+                      Background="#E53935"
+                      Foreground="White"
+                      CornerRadius="25"
+                      FontSize="20"
+                      FontWeight="SemiBold"
+                      VerticalAlignment="Center" />
+            </StackPanel>
           </StackPanel>
         </Button>
 
-        <Button Width="200"
-                        Height="200"
-                        BorderThickness="0"
-                        Background="Transparent"
+        <Button Width="300"
+                Height="300"
+                BorderThickness="0"
+                Background="Transparent"
                 
-                        CornerRadius="12"
-                        Padding="8"
-                        Margin="20,0,20,15"
-                        Command="{Binding ButtonClick}"
-                        CommandParameter="Burger"
-                        RenderTransformOrigin="10,10">
+                CornerRadius="12"
+
+                Margin="30,5,30,15"
+                CommandParameter="Burger"
+                RenderTransformOrigin="10,10">
 
           <StackPanel VerticalAlignment="Center"
                       HorizontalAlignment="Center" Spacing="5">
 
-            <Image Height="120"
-                   Width="120"
+            <Image Height="190"
+                   Width="190"
                    Stretch="Uniform"
                    Source="/Assets/Burger and drinkc jpgs/ФАНТА.png"
                    HorizontalAlignment="Center"/>
             <TextBlock Text="ФАНТА"
-                       FontSize="18"
-                       FontWeight="Bold"
-                       Foreground="#808080"
-                       HorizontalAlignment="Center"/>
-            <Button Content="Добавить"
-              Background="#E53935"
-              Foreground="White"
-              CornerRadius="6"
-              FontSize="18"
-              FontWeight="SemiBold"
-              HorizontalAlignment="Center"
-              VerticalAlignment="Stretch"/>
+                       FontSize="35"
+                       FontWeight="ExtraBlack"
+                       Foreground="Black"
+                       HorizontalAlignment="Center"
+                       Padding=""/>
+            <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Right">
+              <TextBlock Text="290"
+                         FontSize="30"
+                         FontFamily="Flame"/>
+              <TextBlock Text=" ₽"
+                         FontFamily="Flame"
+                         FontSize="25"
+                         Padding="-10,-1,30,0"/>
+              <Button Content="Добавить"
+                      Command="{Binding ToVopper}"
+                      Background="#E53935"
+                      Foreground="White"
+                      CornerRadius="25"
+                      FontSize="20"
+                      FontWeight="SemiBold"
+                      VerticalAlignment="Center" />
+            </StackPanel>
           </StackPanel>
         </Button>
 
-        <Button Width="200"
-                        Height="200"
-                        BorderThickness="0"
-                        Background="Transparent"
+        <Button Width="300"
+                Height="300"
+                BorderThickness="0"
+                Background="Transparent"
                 
-                        CornerRadius="12"
-                        Padding="8"
-                        Margin="20,0,20,15"
-                        Command="{Binding ButtonClick}"
-                        CommandParameter="Burger"
-                        RenderTransformOrigin="10,10">
+                CornerRadius="12"
+
+                Margin="90,5,30,15"
+                CommandParameter="Burger"
+                RenderTransformOrigin="10,10">
 
           <StackPanel VerticalAlignment="Center"
                       HorizontalAlignment="Center" Spacing="5">
 
-            <Image Height="120"
-                   Width="120"
+            <Image Height="190"
+                   Width="190"
                    Stretch="Uniform"
                    Source="/Assets/Burger and drinkc jpgs/СПРАЙТ.png"
                    HorizontalAlignment="Center"/>
             <TextBlock Text="Спрайт"
-                       FontSize="18"
-                       FontWeight="Bold"
-                       Foreground="#808080"
-                       HorizontalAlignment="Center"/>
-            <Button Content="Добавить"
-              Background="#E53935"
-              Foreground="White"
-              CornerRadius="6"
-              FontSize="18"
-              FontWeight="SemiBold"
-              HorizontalAlignment="Center"
-              VerticalAlignment="Stretch"/>
+                       FontSize="35"
+                       FontWeight="ExtraBlack"
+                       Foreground="Black"
+                       HorizontalAlignment="Center"
+                       Padding=""/>
+            <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Right">
+              <TextBlock Text="290"
+                         FontSize="30"
+                         FontFamily="Flame"/>
+              <TextBlock Text=" ₽"
+                         FontFamily="Flame"
+                         FontSize="25"
+                         Padding="-10,-1,30,0"/>
+              <Button Content="Добавить"
+                      Command="{Binding ToVopper}"
+                      Background="#E53935"
+                      Foreground="White"
+                      CornerRadius="25"
+                      FontSize="20"
+                      FontWeight="SemiBold"
+                      VerticalAlignment="Center" />
+            </StackPanel>
           </StackPanel>
         </Button>
 
-        <Button Width="200"
-                        Height="200"
-                        BorderThickness="0"
-                        Background="Transparent"
+
+        <Button Width="300"
+                Height="300"
+                BorderThickness="0"
+                Background="Transparent"
                 
-                        CornerRadius="12"
-                        Padding="8"
-                        Margin="20,0,20,15"
-                        Command="{Binding ButtonClick}"
-                        CommandParameter="Burger"
-                        RenderTransformOrigin="10,10">
+                CornerRadius="12"
+
+                Margin="85,5,45,30"
+                CommandParameter="Burger"
+                RenderTransformOrigin="10,10">
 
           <StackPanel VerticalAlignment="Center"
                       HorizontalAlignment="Center" Spacing="5">
 
-            <Image Height="120"
-                   Width="120"
+            <Image Height="190"
+                   Width="190"
                    Stretch="Uniform"
                    Source="avares://Burger Menu/Assets/Burger and drinkc jpgs/КОФЕ.png"
                    HorizontalAlignment="Center"/>
             <TextBlock Text="Кофе"
-                       FontSize="18"
-                       FontWeight="Bold"
-                       Foreground="#808080"
-                       HorizontalAlignment="Center"/>
-            <Button Content="Добавить"
-              Background="#E53935"
-              Foreground="White"
-              CornerRadius="6"
-              FontSize="18"
-              FontWeight="SemiBold"
-              HorizontalAlignment="Center"
-              VerticalAlignment="Stretch"/>
+                       FontSize="35"
+                       FontWeight="ExtraBlack"
+                       Foreground="Black"
+                       HorizontalAlignment="Center"
+                       Padding=""/>
+            <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Right">
+              <TextBlock Text="290"
+                         FontSize="30"
+                         FontFamily="Flame"/>
+              <TextBlock Text=" ₽"
+                         FontFamily="Flame"
+                         FontSize="25"
+                         Padding="-10,-1,30,0"/>
+              <Button Content="Добавить"
+                      Command="{Binding ToVopper}"
+                      Background="#E53935"
+                      Foreground="White"
+                      CornerRadius="25"
+                      FontSize="20"
+                      FontWeight="SemiBold"
+                      VerticalAlignment="Center" />
+            </StackPanel>
           </StackPanel>
         </Button>
 
-        <Button Width="200"
-                        Height="200"
-                        BorderThickness="0"
-                        Background="Transparent"
+        <Button Width="300"
+                Height="300"
+                BorderThickness="0"
+                Background="Transparent"
                 
-                        CornerRadius="12"
-                        Padding="8"
-                        Margin="20,0,20,15"
-                        Command="{Binding ButtonClick}"
-                        CommandParameter="Burger"
-                        RenderTransformOrigin="10,10">
+                CornerRadius="12"
+
+                Margin="30,5,30,30"
+                CommandParameter="Burger"
+                RenderTransformOrigin="10,10">
 
           <StackPanel VerticalAlignment="Center"
                       HorizontalAlignment="Center" Spacing="5">
 
-            <Image Height="120"
-                   Width="120"
+            <Image Height="190"
+                   Width="190"
                    Stretch="Uniform"
                    Source="/Assets/Burger and drinkc jpgs/FUSE TEA.png"
                    HorizontalAlignment="Center"/>
             <TextBlock Text="FUSE Tea"
-                       FontSize="18"
-                       FontWeight="Bold"
-                       Foreground="#808080"
-                       HorizontalAlignment="Center"/>
-            <Button Content="Добавить"
-              Background="#E53935"
-              Foreground="White"
-              CornerRadius="6"
-              FontSize="18"
-              FontWeight="SemiBold"
-              HorizontalAlignment="Center"
-              VerticalAlignment="Stretch"/>
+                       FontSize="35"
+                       FontWeight="ExtraBlack"
+                       Foreground="Black"
+                       HorizontalAlignment="Center"
+                       Padding=""/>
+            <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Right">
+              <TextBlock Text="290"
+                         FontSize="30"
+                         FontFamily="Flame"/>
+              <TextBlock Text=" ₽"
+                         FontFamily="Flame"
+                         FontSize="25"
+                         Padding="-10,-1,30,0"/>
+              <Button Content="Добавить"
+                      Command="{Binding ToVopper}"
+                      Background="#E53935"
+                      Foreground="White"
+                      CornerRadius="25"
+                      FontSize="20"
+                      FontWeight="SemiBold"
+                      VerticalAlignment="Center" />
+            </StackPanel>
           </StackPanel>
         </Button>
 
-        <Button Width="200"
-                        Height="200"
-                        BorderThickness="0"
-                        Background="Transparent"
+        <Button Width="300"
+                Height="300"
+                BorderThickness="0"
+                Background="Transparent"
                 
-                        CornerRadius="12"
-                        Padding="8"
-                        Margin="20,0,20,15"
-                        Command="{Binding ButtonClick}"
-                        CommandParameter="Burger"
-                        RenderTransformOrigin="10,10">
+                CornerRadius="12"
+
+                Margin="90,5,30,30"
+                CommandParameter="Burger"
+                RenderTransformOrigin="10,10">
 
           <StackPanel VerticalAlignment="Center"
                       HorizontalAlignment="Center" Spacing="5">
 
-            <Image Height="120"
-                   Width="120"
+            <Image Height="190"
+                   Width="190"
                    Stretch="Uniform"
                    Source="/Assets/Burger and drinkc jpgs/МИНЕРАЛЬНАЯ ВОДА.png"
                    HorizontalAlignment="Center"/>
-            <TextBlock Text="Минеральная Вода"
-                       FontSize="18"
-                       FontWeight="Bold"
-                       Foreground="#808080"
-                       HorizontalAlignment="Center"/>
-            <Button Content="Добавить"
-              Background="#E53935"
-              Foreground="White"
-              CornerRadius="6"
-              FontSize="18"
-              FontWeight="SemiBold"
-              HorizontalAlignment="Center"
-              VerticalAlignment="Stretch"/>
+            <TextBlock Text="Питьевая Вода"
+                       FontSize="35"
+                       FontWeight="ExtraBlack"
+                       Foreground="Black"
+                       HorizontalAlignment="Center"
+                       Padding=""/>
+            <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Right">
+              <TextBlock Text="290"
+                         FontSize="30"
+                         FontFamily="Flame"/>
+              <TextBlock Text=" ₽"
+                         FontFamily="Flame"
+                         FontSize="25"
+                         Padding="-10,-1,30,0"/>
+              <Button Content="Добавить"
+                      Command="{Binding ToVopper}"
+                      Background="#E53935"
+                      Foreground="White"
+                      CornerRadius="25"
+                      FontSize="20"
+                      FontWeight="SemiBold"
+                      VerticalAlignment="Center" />
+            </StackPanel>
           </StackPanel>
         </Button>
-        
-        
+
+
       </WrapPanel>
     </ScrollViewer>
   </StackPanel>

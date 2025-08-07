@@ -1,3 +1,4 @@
+using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 
@@ -8,6 +9,7 @@ namespace Burger_Menu.Views
         public MainWindow()
         {
             InitializeComponent();
+            this.AttachDevTools();
         }
     }
 }

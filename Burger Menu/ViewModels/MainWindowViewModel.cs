@@ -9,6 +9,7 @@ namespace Burger_Menu.ViewModels
 {
     public class MainWindowViewModel : ViewModelBase
     {
+        public VopperViewModel VopperVM { get; }
         private string _title;
         public string Title
         {
@@ -26,6 +27,7 @@ namespace Burger_Menu.ViewModels
         public ReactiveCommand<Unit, Unit> ShowMain { get; }
         public ReactiveCommand<Unit, Unit> ShowBurger { get; }
         public ReactiveCommand<Unit, Unit> ShowDrinck { get; }
+        public ReactiveCommand<Unit, Unit> SwitchToOrder { get; }
 
         private string _price = "0"; // Переменная
         public string Price    // Поле
@@ -34,6 +36,12 @@ namespace Burger_Menu.ViewModels
             set => this.RaiseAndSetIfChanged(ref _price, value); // Уведомляем интерфейс, при изменении поля
         }
 
+        private string _Secondprice = "0"; // Переменная
+        public string SecondPrice    // Поле
+        {
+            get => _Secondprice;
+            set => this.RaiseAndSetIfChanged(ref _Secondprice, value); // Уведомляем интерфейс, при изменении поля
+        }
 
         public MainWindowViewModel()
         {
@@ -41,33 +49,59 @@ namespace Burger_Menu.ViewModels
             ShowMain = ReactiveCommand.Create(ShowMainView);
             ShowBurger = ReactiveCommand.Create(ShowBurgerView);
             ShowDrinck = ReactiveCommand.Create(ShowDrinckView);
-
+            SwitchToOrder = ReactiveCommand.Create(ShowOrderView);
             CurrentView = new MainViewModel(this);
             Title = "Всё Меню";
+            VopperVM = new VopperViewModel(this);
         }
 
         private void ShowMainView()
         {
             CurrentView = new MainViewModel(this);
+            SecondPrice = "0"; 
             Title = "Всё Меню";
+        }
+
+        private void ShowOrderView()
+        {
+            CurrentView = new OrderViewModel();
+            SecondPrice = "0";
+            Title = "Заказ";
         }
 
         private void ShowBurgerView()
         {
-            CurrentView = new BurgersViewModel();
+            CurrentView = new BurgersViewModel(this);
+            SecondPrice = "0";
             Title = "Бургеры";
         }
 
         private void ShowDrinckView()
         {
-            CurrentView = new DrincksViewModel();
+            CurrentView = new DrincksViewModel(this);
+            SecondPrice = "0";
             Title = "Напитки";
+        }
+        public void AddView()
+        {
+            CurrentView = new MainViewModel(this);
+            SecondPrice = "0";
+            Title = "Всё Меню";
         }
 
         public void Calc(string name)
         {
             MenuPrice menu = new MenuPrice();
             Price = (Convert.ToDouble(Price) + menu.GetPrice(name)).ToString();
+        }
+        public void AddPrice()
+        {
+            Price = (Convert.ToDouble(Price) + Convert.ToDouble(SecondPrice)).ToString();
+        }
+        public void SecondCalc(string name)
+        {
+            MenuPrice Secondmenu = new MenuPrice();
+            SecondPrice = (Convert.ToDouble(SecondPrice) + Secondmenu.GetSecondPrice(name)).ToString();
         }
     }
 }

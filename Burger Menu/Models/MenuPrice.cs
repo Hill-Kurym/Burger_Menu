@@ -18,15 +18,20 @@ namespace Burger_Menu.Models
         private readonly Dictionary<string, double> _menu = new Dictionary<string, double>(StringComparer.OrdinalIgnoreCase)
         {
             // Сразу добавим элементы в наше меню. Является плохим практисом, но допустимо в маленьких проектах 
-            ["Fries"] = 50,
             ["Vopper"] = 290,
-            ["Cheeseburger"] = 250,
-            ["Double Cheeseburger"] = 350,
-            ["Chicken Burger"] = 300,
-            ["Veggie Burger"] = 220,
-            ["Milkshake"] = 150,
-            ["Soda"] = 80,
-            ["Water"] = 50,
+
+            // Добавь сюда элементы, если хочешь расширить меню
+        };
+
+        private readonly Dictionary<string, double> _Secondmenu = new Dictionary<string, double>(StringComparer.OrdinalIgnoreCase)
+        {
+            // Сразу добавим элементы в наше меню. Является плохим практисом, но допустимо в маленьких проектах 
+            ["Angus"] = 100,
+            ["Sause"] = 55,
+            ["DoubleCheader"] = 60,
+            ["Cheader"] = 50,
+            ["Beacon"] = 110,
+            ["Onion"] = 75,
 
             // Добавь сюда элементы, если хочешь расширить меню
         };
@@ -39,6 +44,13 @@ namespace Burger_Menu.Models
         public double? GetPrice(string name)
         {
             if (_menu.TryGetValue(name, out var price)) // Важно использовать Try ( TryGetValue, TryAdd, TryDequeue ), дабы не выносить exeption за пределы вызова
+                return price;
+            return null;
+        }
+
+        public double? GetSecondPrice(string name)
+        {
+            if (_Secondmenu.TryGetValue(name, out var price)) // Важно использовать Try ( TryGetValue, TryAdd, TryDequeue ), дабы не выносить exeption за пределы вызова
                 return price;
             return null;
         }

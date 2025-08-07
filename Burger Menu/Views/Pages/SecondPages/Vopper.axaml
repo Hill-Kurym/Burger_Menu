@@ -25,87 +25,164 @@
       </StackPanel>
       <StackPanel Grid.Column="1" Margin="10,100">
         <TextBlock Text="Приготовленный на огне бифштекс из 100% говядины, сочный помидор," 
-                   FontSize="18" Margin="0,30,0,0"/>
-        <TextBlock Text="свежий нарезанный салат, густой майонез, хрустящие огурчики" 
-                   FontSize="18" Margin="0,5,0,0"/>
+                   FontFamily="Montserrat-Italic"
+                   FontSize="21" Margin="0,30,0,0"/>
+        <TextBlock Text="свежий нарезанный салат, густой майонез, хрустящие огурчики"
+                   FontFamily="Montserrat-Italic"
+                   FontSize="21" Margin="0,5,0,0"/>
         <TextBlock Text="и свежий лук в мягкой булочке с кунжутом."
-                   FontSize="18" Margin="0,5,0,0"/>
-        <TextBlock Text="Цена: 290 ₽" FontSize="28" Margin="0,20,0,0"
+                   FontFamily="Montserrat-Italic"
+                   FontSize="21" Margin="0,5,0,0"/>
+        <TextBlock Text="Цена: 290 ₽" FontFamily="Flame" FontSize="30" Margin="0,20,0,0"
                    Foreground="Black"/>
       </StackPanel>
     </Grid>
 
     <StackPanel Grid.Row="1">
       <ScrollViewer 
-              HorizontalScrollBarVisibility="Visible"
+              HorizontalScrollBarVisibility="Hidden"
               VerticalScrollBarVisibility="Disabled"
               HorizontalAlignment="Left"
               VerticalAlignment="Top"
               ScrollViewer.HorizontalScrollBarVisibility="Auto"
               ScrollViewer.VerticalScrollBarVisibility="Disabled"
-              Margin="20,0">
+              Margin="20,-1.5">
         <WrapPanel Orientation="Horizontal">
-          <Border Classes="Card">
-            <StackPanel>
-              <Image Source="/Assets/Image/Angus.PNG"
-                     Classes="MainImage"/>
-              <TextBlock Text="Ангус"
-                         Classes="MainText"/>
-              <TextBlock Text="Заменить на"
-                         Classes="SecondText"/>
-              <TextBlock Text="котлету Ангус"
-                         Classes="SecondText"/>
-              <TextBlock Text="100 ₽"
-                         Classes="Price"/>
-              <Button Classes="Plus"/>
-            </StackPanel>
+          <Border Classes="AnimateBorder Card">
+            <Grid>
+              <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+              </Grid.RowDefinitions>
+
+              <Image Grid.Row="0" Classes="MainImage" Source="/Assets/Image/Angus.PNG"/>
+              <TextBlock Grid.Row="1" Classes="MainText" Text="Ангус"/>
+              <TextBlock Grid.Row="3" Classes="SecondText" Text="Котлета Ангус"/>
+              <TextBlock Grid.Row="4" Classes="Price" Text="100 ₽"/>
+              <Button Grid.Row="5" Classes="Plus"
+                      Command="{Binding AddToOrderFirst}"
+                      CommandParameter="Angus"/>
+            </Grid>
           </Border>
-          <Border Classes="Card">
-            <StackPanel>
-              <Image Source="\Assets\Image\Sause.PNG"/>
-              <TextBlock Text="Соус"
-                         Classes="MainText"/>
-              <TextBlock Text="Острый соус"
-                         Classes="SecondText"/>
-              <TextBlock Text="10 ₽"
-                         Classes="Price"/>
-              <Button Classes="Plus"
-                      Margin="30"/>
-            </StackPanel>
+
+          <Border Classes="AnimateBorder Card">
+            <Grid>
+              <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+              </Grid.RowDefinitions>
+
+              <Image Grid.Row="0" Classes="MainImage" Source="\Assets\Image\Sause.PNG"/>
+              <TextBlock Grid.Row="1" Classes="MainText" Text="Соус"/>
+              <TextBlock Grid.Row="2" Classes="SecondText" Text="Острый соус"/>
+              <TextBlock Grid.Row="4" Classes="Price" Text="55 ₽"/>
+              <Button Grid.Row="5" Classes="Plus"
+                      Command="{Binding AddToOrderFirst}"
+                      CommandParameter="Sause"/>
+            </Grid>
           </Border>
-          <Border Classes="Card">
-            <StackPanel>
-              <Image Source="\Assets\Image\Chedder.PNG"/>
-              <TextBlock Text="Двойной"
-                         Classes="MainText"/>
-              <TextBlock Text="Чеддер"
-                         Classes="MainText"/>
-              <TextBlock Text="35 ₽"
-                         Classes="Price"/>
-              <Button Classes="Plus"
-                      Margin="44"/>
-            </StackPanel>
+
+          <Border Classes="AnimateBorder Card">
+            <Grid>
+              <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+              </Grid.RowDefinitions>
+
+              <Image Grid.Row="0" Classes="MainImage" Source="\Assets\Image\Chedder.PNG"/>
+              <TextBlock Grid.Row="1" Classes="MainText" Text="Двойной"/>
+              <TextBlock Grid.Row="2" Classes="MainText" Text="Чеддер"/>
+              <TextBlock Grid.Row="4" Classes="Price" Text="60 ₽"/>
+              <Button Grid.Row="5" Classes="Plus"
+                      Command="{Binding AddToOrderFirst}"
+                      CommandParameter="DoubleCheader"/>
+            </Grid>
           </Border>
-          <Border Classes="Card">
-            <StackPanel>
-              <Image Source="\Assets\Image\ChedMain.PNG"/>
-              <TextBlock Text=""
-                         Classes="MainText"/>
-              <TextBlock Text="Чеддер"
-                         Classes="MainText"/>
-              <TextBlock Text="20 ₽"
-                         Classes="Price"/>
-              <Button Classes="Plus"
-                      Margin="44"/>
-            </StackPanel>
+
+          <Border Classes="AnimateBorder Card">
+            <Grid>
+              <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+              </Grid.RowDefinitions>
+
+              <Image Grid.Row="0" Classes="MainImage" Source="\Assets\Image\ChedMain.PNG"/>
+              <TextBlock Grid.Row="1" Classes="SecondText" Text="        "/>
+              <TextBlock Grid.Row="2" Classes="MainText" Text="Чеддер"/>
+              <TextBlock Grid.Row="4" Classes="Price" Text="50 ₽"/>
+              <Button Grid.Row="5" Classes="Plus"
+                      Command="{Binding AddToOrderFirst}"
+                      CommandParameter="Cheader"/>
+            </Grid>
           </Border>
+
+          <Border Classes="AnimateBorder Card">
+            <Grid>
+              <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+              </Grid.RowDefinitions>
+
+              <Image Grid.Row="0" Classes="MainImage" Source="\Assets\Image\Beacon.PNG"/>
+              <TextBlock Grid.Row="1" Classes="SecondText" Text="        "/>
+              <TextBlock Grid.Row="2" Classes="MainText" Text="Бекон"/>
+              <TextBlock Grid.Row="4" Classes="Price" Text="110 ₽"/>
+              <Button Grid.Row="5" Classes="Plus"
+                      Command="{Binding AddToOrderFirst}"
+                      CommandParameter="Beacon"/>
+            </Grid>
+          </Border>
+
+          <Border Classes="AnimateBorder Card">
+            <Grid>
+              <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+              </Grid.RowDefinitions>
+
+              <Image Grid.Row="0" Classes="MainImage" Source="\Assets\Image\StrangeOnion.PNG"/>
+              <TextBlock Grid.Row="1" Classes="MainText" Text="Хрустящий"/>
+              <TextBlock Grid.Row="2" Classes="MainText" Text="Лук"/>
+              <TextBlock Grid.Row="4" Classes="Price" Text="75 ₽"/>
+              <Button Grid.Row="5" Classes="Plus"
+                      Command="{Binding AddToOrderFirst}"
+                      CommandParameter="Onion"/>
+            </Grid>
+          </Border>
+          
+          
+          
         </WrapPanel>
       </ScrollViewer>
    </StackPanel>
     
    <StackPanel Grid.Row="2">
      <Button
-        Margin="10,50,5,0"
+        Margin="10,-7,5,80"
          Width="300"
          Height="50"
          VerticalAlignment="Center"
@@ -114,7 +191,7 @@
          Foreground="White"
          FontSize="16"
          FontWeight="Bold"
-         CornerRadius="25"
+         CornerRadius="50"
          Command="{Binding AddToOrder}"
          CommandParameter="Vopper">
              <TextBlock

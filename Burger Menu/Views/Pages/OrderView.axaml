@@ -1,0 +1,49 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Burger_Menu.Views.Pages.OrderView"
+             xmlns:vm="clr-namespace:Burger_Menu.ViewModels"
+             x:DataType="vm:OrderViewModel">
+  <ScrollViewer VerticalAlignment="Center" Width="1300" Height="900"
+                Margin="0,15,0,0">
+    <StackPanel Orientation="Vertical">
+      <Border
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center"
+        Height="1600"
+        Width="1200"
+        Background="Transparent"
+        BorderBrush="Black"
+        BorderThickness="2"
+        CornerRadius="25"
+        Margin="0,0,0,150">
+        <WrapPanel Orientation="Vertical">
+          <ItemsControl ItemsSource="{Binding Orders}">
+            <ItemsControl.ItemTemplate>
+              <DataTemplate>
+                <Border Width="100"
+                        Height="100">
+                  <StackPanel Orientation="Horizontal">
+                    <Image Source="{Binding ImagePath}"/>
+                    <StackPanel Orientation="Vertical">
+                      <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Name}"/>
+                        <TextBlock Text="{Binding Price}"/>
+                      </StackPanel>
+                      <StackPanel Orientation="Horizontal">
+                        <Button Content="Убрать"
+                                CornerRadius="25"/>
+                      </StackPanel>
+                    </StackPanel>
+                  </StackPanel>
+                </Border>
+              </DataTemplate>
+            </ItemsControl.ItemTemplate>
+          </ItemsControl>
+        </WrapPanel>
+      </Border>
+    </StackPanel>
+  </ScrollViewer>
+</UserControl>

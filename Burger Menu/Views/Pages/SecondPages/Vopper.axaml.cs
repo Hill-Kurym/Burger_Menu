@@ -11,7 +11,6 @@ namespace Burger_Menu.Views.Pages.SecondPages
         public Vopper()
         {
             InitializeComponent();
-            this.DataContext = new VopperViewModel(new MainWindowViewModel());
         }
     }
 }

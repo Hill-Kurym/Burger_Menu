@@ -23,10 +23,10 @@
       <sviews:Vopper />
     </DataTemplate>
 
+    <DataTemplate DataType="{x:Type vm:OrderViewModel}">
+      <views:OrderView />
+    </DataTemplate>
   </Application.DataTemplates>
-  
-    
-
 
   
   <Application.Styles>

@@ -1,4 +1,5 @@
 ﻿using Burger_Menu.Models;
+using Burger_Menu.Views;
 using ReactiveUI;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,9 @@ namespace Burger_Menu.ViewModels
 {
     internal class BurgersViewModel: ViewModelBase
     {
+        private MainWindowViewModel _mainWindow;
         public ReactiveCommand<string, Unit> ButtonClick { get; }
+        public ReactiveCommand<Unit, Unit> ToVopper { get; }
 
         private string _price = "0"; // Переменная
         public string Price    // Поле
@@ -21,12 +24,18 @@ namespace Burger_Menu.ViewModels
         }
 
 
-        public BurgersViewModel()
+        public BurgersViewModel(MainWindowViewModel mainWindow)
         {
+            _mainWindow = mainWindow;
             ButtonClick = ReactiveCommand.Create<string>(Calc);
+            ToVopper = ReactiveCommand.Create(ShowVopper);
         }
 
-
+        private void ShowVopper()
+        {
+            _mainWindow.CurrentView = new VopperViewModel(_mainWindow);
+            _mainWindow.Title = "Воппер";
+        }
         private void Calc(string name)
         {
             MenuPrice menu = new MenuPrice();

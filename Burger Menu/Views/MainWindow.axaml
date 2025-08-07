@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         WindowState="Maximized"
         WindowStartupLocation="CenterScreen"
-        CanResize="False"
-        Width="1920" Height="900"
+
+        MinHeight="850" MinWidth="1024"
         x:Class="Burger_Menu.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
@@ -23,38 +23,33 @@
       <ImageBrush Source="/Assets/Background/Paper.png" Stretch="UniformToFill"/>
     </Grid.Background>
 
-    <StackPanel Grid.Column="0" >
+    <StackPanel Grid.Row="0" >
       <Border Background="#E53935" Width="10000" CornerRadius="15"
               Height="42" HorizontalAlignment="Center"
               VerticalAlignment="Center">
         <StackPanel Orientation="Horizontal"
                     HorizontalAlignment="Center">
-          <TextBlock Text="🍔Burger Menu -"
+          <TextBlock Text="🍔Burger Menu"
                  Foreground="White"
                  FontSize="28"
                  FontWeight="Bold"
                  HorizontalAlignment=""/>
-          <TextBlock Text="{Binding Title}"
-            Foreground="White"
-            FontSize="21"
-            FontStyle="Italic"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"/>
-          <ContentControl x:Name="TitleContent">
-          </ContentControl>
         </StackPanel>
       </Border>
     </StackPanel>
     <Grid Grid.Row="1" ColumnDefinitions="*,6*">
-      <StackPanel Grid.Column="0" Background="#2D2D30" 
- Height="1000">
-        <Grid RowDefinitions="*,*,*,Auto,Auto">
-          <Button HorizontalContentAlignment="Center"
-                  VerticalContentAlignment="Center"
-                  Width="212" Height="50"
-                  Margin="0,4"
-                  Classes="Main" Grid.Row="0" Content="Всё меню"
-                  Command="{Binding ShowMain}"/>
+      <WrapPanel Orientation="Vertical" HorizontalAlignment="Left" 
+                 Grid.Column="0" Background="#2D2D30" 
+                 Height="1000" Width="212">
+        <Grid RowDefinitions="*,*,*,Auto,Auto,Auto">
+          <StackPanel Grid.Row="0" HorizontalAlignment="Left">
+            <Button HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Width="212" Height="50"
+                    Margin="0,2,0,2"
+                    Classes="Main" Grid.Row="0" Content="Всё меню"
+                    Command="{Binding ShowMain}"/>
+         </StackPanel>
           <StackPanel Grid.Row="1">
             <Button HorizontalContentAlignment="Center"
                     VerticalContentAlignment="Center"
@@ -69,24 +64,38 @@
                   Margin="0,4"
                   Classes="Main" Grid.Row="2" Content="Напитки"
                   Command="{Binding ShowDrinck}"/>
-          <TextBlock Grid.Row="3"
-           Text="{Binding Price}"
-           Foreground="Black"
-           Background="White"/>
-          <Border Grid.Row="4" Background="#2D2D30" Height="850"/>
-          <Button Content="Заказать" Grid.Row="4" 
-                  HorizontalContentAlignment="Center"
-                  VerticalContentAlignment="Center"
-                  Width="210" Height="50"
-                  Background="Red"
-                  Margin="4,4">
-          </Button>
+          <Border Grid.Row="3" Background="#2D2D30" 
+                  Height="590" Width="0"/>
+            <Button Content="Заказать" Grid.Row="4"
+                    CornerRadius="25" Command="{Binding SwitchToOrder}"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Width="210" Height="50"
+                    Background="Red"
+                    Foreground="White"
+                    Margin="4,4">
+            </Button>
+
+          
         </Grid>
-      </StackPanel>
+      </WrapPanel>
 
       <StackPanel Grid.Column="1">
-        <ContentControl x:Name="PageContainer" Content="{Binding CurrentView}">
-        </ContentControl>
+        <Grid RowDefinitions="Auto,Auto">
+            <TextBlock Grid.Row="0" Text="{Binding Title}"
+              Foreground="Black"
+              FontSize="40"
+              Width="240"
+              Margin="4,4,130,4"
+              FontStyle="Italic"
+              HorizontalAlignment="Center"
+              VerticalAlignment="Center"/>
+          <ContentControl Grid.Row="1" 
+                          x:Name="PageContainer" 
+                          Content="{Binding CurrentView}"
+                          >
+          </ContentControl>
+        </Grid>
       </StackPanel>
     </Grid>
   </Grid>
